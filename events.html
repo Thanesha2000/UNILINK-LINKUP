@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vertical Cards Layout</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f4f4f4;
+      }
+
+      .cards-container {
+        display: flex;
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center the cards horizontally */
+        width: 90%;
+        max-width: 600px;
+        margin: 50px auto; /* Adjust vertical margin as needed */
+      }
+
+      .card {
+        background-color: white;
+        width: 100%; /* Card takes full container width */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 20px; /* Space between cards */
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .card p {
+        font-size: 1rem;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cards-container">
+      <div class="card">
+        <h2>Kalamgiri Recruitment</h2>
+        <a href="https://forms.gle/ceAdbCrWsmreCepDA" target="_blank"
+          >Apply now
+        </a>
+        <p>Kalamgiri is hiring , apply now .</p>
+      </div>
+
+      <div class="card">
+        <h2>Genesis</h2>
+        <a href="https://www.genesisnow.tech" target="_blank">Apply now </a>
+        <p>Genesis is hiring , apply now .</p>
+      </div>
+
+      <div class="card">
+        <h2>Hackhound</h2>
+
+        <a href="https://forms.gle/ouzP6eZZT3iG6DuH9" target="_blank"
+          >Register now!
+        </a>
+        <p>
+          Join Hackhound for an exclusive session on Research Methodology &
+          Effective Paper Writing hosted by the brilliant Tripti Ahuja!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

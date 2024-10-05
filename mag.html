@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAGAN Music Society</title>
+    <!-- Add Bootstrap CSS for card styling -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="mag.css" />
+    <style>
+      /* Import Google Fonts */
+      @import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap");
+
+      /* Basic reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body styling */
+      body {
+        font-family: "Goldman", cursive;
+        background-color: rgba(0, 45, 64, 255);
+        color: white;
+        display: flex;
+        flex-direction: column; /* Arrange elements vertically */
+      }
+
+      /* Paragraph styling */
+      section p {
+        font-size: 30px; /* Adjust font size as needed */
+        color: #fff;
+        transition: color 0.5s ease;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 20px; /* Space between text and image */
+      }
+
+      section p:hover {
+        color: crimson;
+      }
+
+      /* Hover reveal styling */
+      .hover-reveal {
+        display: none; /* Hide by default */
+        position: absolute;
+        width: 200px; /* Image width */
+        height: 300px; /* Image height */
+        z-index: 1; /* Layer above the text */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center adjustment */
+        top: -320px; /* Position above the text */
+      }
+
+      /* Show image on hover */
+      .name-item:hover .hover-reveal {
+        display: block; /* Show image when text is hovered */
+      }
+
+      /* Centering the names */
+      .name-container {
+        display: flex; /* Use flexbox for alignment */
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        gap: 20px; /* Space between items */
+        margin-top: 20px; /* Space above the section */
+      }
+
+      /* Card styling */
+      .card {
+        margin-bottom: 20px;
+      }
+
+      /* Hover image styling */
+      .hover-reveal img {
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Optional: add rounded corners */
+      }
+
+      /* Individual name item styling */
+      .name-item {
+        position: relative; /* For positioning hover images */
+        text-align: center; /* Center align text */
+        cursor: pointer; /* Change cursor on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wel">
+      <img
+        src="https://cdn.campsite.bio/eyJidWNrZXQiOiJjYW1wc2l0ZS1iaW8tc3RvcmFnZSIsImtleSI6Im1lZGlhL3Byb2ZpbGUtaW1hZ2VzL2VmZWE3OGFkLWE5YTEtNDYxZC04OWIwLTMyNzQxYWI0MTc2YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjIwMH19fQ=="
+        alt="MAGAN logo"
+      />
+      <h1>Welcome to MAGAN!</h1>
+      <h4>THE MUSIC SOCIETY OF SRM</h4>
+    </div>
+
+    <div id="page1" class="container">
+      <div class="row">
+        <div id="left" class="col-md-6">
+          <img src="m3.jpg" alt="Lit Society Image" class="img-fluid" />
+        </div>
+        <div id="right" class="col-md-6">
+          <p>
+            Welcome to Magan – The Pulse of Music at SRM! At Magan, we live and
+            breathe music! Whether you’re a budding musician, a seasoned
+            performer, or simply someone who loves the magic of melody, you’ve
+            found your rhythm with us. Our club is a harmonious blend of talent,
+            passion, and creativity, open to all music enthusiasts. Join us in
+            exploring diverse genres, discovering new sounds, and creating
+            unforgettable musical experiences. From jam sessions to live
+            performances, Magan is your stage. Let’s create music that echoes
+            beyond the walls of our campus! Feel the beat, share the passion,
+            and be a part of the sound that makes SRM hum!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="page2">
+      <div id="heading">
+        <h3>PAST EVENTS</h3>
+      </div>
+      <!-- Card Section -->
+      <div class="container mt-5">
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="m5.jpg" alt="Card 1 Image" />
+              <div class="card-body">
+                <h5 class="card-title">Talent Show</h5>
+                <p class="card-text">
+                  Participants showcased their diverse talents, creating an
+                  electrifying atmosphere. This event not only highlighted the
+                  creativity and passion of the students but also fostered a
+                  sense of community and camaraderie among attendees. As
+                  everyone reminisces about the unforgettable moments and
+                  incredible performances, Magan looks forward to hosting more
+                  engaging events that celebrate the artistic spirit of the
+                  college.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="m2.jpg" class="card-img-top" alt="Card 2 Image" />
+              <div class="card-body">
+                <h5 class="card-title">NAAC stall</h5>
+                <p class="card-text">
+                  The Magan Music Club made a remarkable impact during the NAAC
+                  visit with their vibrant stall, showcasing the essence of
+                  creativity and collaboration. Their engaging displays and
+                  interactive sessions highlighted the club’s commitment to
+                  promoting musical talent and fostering a sense of community
+                  within the college. The stall not only drew attention but also
+                  inspired students to explore their passion for music. It was a
+                  proud moment for Magan as they contributed to the celebration
+                  of artistic excellence at the institution.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="m4.jpg" class="card-img-top" alt="Card 3 Image" />
+              <div class="card-body">
+                <h5 class="card-title">Jam Session</h5>
+                <p class="card-text">
+                  An unforgettable Jam Session that brought together passionate
+                  musicians and enthusiastic music lovers! The lively atmosphere
+                  was filled with creativity, laughter, and spontaneous melodies
+                  as participants jammed together, sharing their love for music
+                  in an informal and fun setting. From catchy tunes to impromptu
+                  performances, the event was a true celebration of talent and
+                  camaraderie. Here's to the wonderful memories created and the
+                  harmonious connections made— Magan looks forward to more
+                  musical moments in the future!
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="page3" class="container mt-5">
+      <h3>MEET THE HEADS :</h3>
+      <!-- Main section -->
+      <section>
+        <!-- Names and corresponding hover images -->
+        <div class="name-container">
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/33FF57/FFFFFF?text=Subham"
+            >
+              Subham Raul
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/33FF57/FFFFFF?text=Subham"
+                alt="Subham"
+              />
+            </div>
+          </div>
+
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/FF33A8/FFFFFF?text=Debangshu"
+            >
+              Debangshu Mondal
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/FF33A8/FFFFFF?text=Debangshu"
+                alt="Debangshu"
+              />
+            </div>
+          </div>
+
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/FFF533/FFFFFF?text=Khushi"
+            >
+              Khushi Gupta
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/FFF533/FFFFFF?text=Khushi"
+                alt="Khushi"
+              />
+            </div>
+          </div>
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/FFF533/FFFFFF?text=Sanya"
+            >
+              Sanya Mary Joy
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/FFF533/FFFFFF?text=Sanya"
+                alt="Sanya"
+              />
+            </div>
+          </div>
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Ninaad"
+            >
+              Ninaad Saxena
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Ninaad"
+                alt="Ninaad"
+              />
+            </div>
+          </div>
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Shubham"
+            >
+              Shubham Joshi
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Shubham"
+                alt="Shubham"
+              />
+            </div>
+          </div>
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Vikrant"
+            >
+              Vikrant Singh
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Vikrant"
+                alt="Vikrant"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Add Bootstrap JS for responsive features -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz4fnFO9gyb2dM+R1arjJqH5gBnd+XzNQbga9e6h7mIWX3EwhgtL3CE2e4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-pjaaH2jvG8sGfnkkFSoB1lZonrSHz3XZ26bqHc8tAuQ3A4W0x4hmcDiYQoX5MQ4C"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

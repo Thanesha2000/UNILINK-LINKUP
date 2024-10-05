@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event List</title>
+    <style>
+      /* CSS styles to display the event list */
+      #event-list {
+        display: none;
+        position: absolute;
+        top: 40px; /* adjust the top margin to position the list below the EVENTS text */
+        left: 0; /* position the list to the left of the EVENTS text */
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        padding: 10px;
+        width: 200px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      #event-list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #event-list li {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      #event-list li:last-child {
+        border-bottom: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Events heading -->
+    <h3 id="events-heading">EVENTS</h3>
+
+    <!-- Event list container -->
+    <div id="event-list">
+      <ul id="events"></ul>
+    </div>
+
+    <script>
+      let events = [
+        {
+          name: '<a href="https://forms.gle/ceAdbCrWsmreCepDA">Kalamgiri Recruitment</a>',
+        },
+        {
+          name: '<a href="https://www.genesisnow.tech">Genesis Recruitment</a>',
+        },
+        { name: "Event 3" },
+      ]; // assume this is your event list
+
+      // toggle event list display when the EVENTS heading is clicked
+      document
+        .getElementById("events-heading")
+        .addEventListener("click", function () {
+          const eventList = document.getElementById("event-list");
+          eventList.style.display =
+            eventList.style.display === "block" ? "none" : "block";
+        });
+
+      // display events
+      function displayEvents() {
+        const eventList = document.getElementById("events");
+        eventList.innerHTML = "";
+        events.forEach(function (event) {
+          const eventHTML = `<li>${event.name}</li>`;
+          eventList.innerHTML += eventHTML;
+        });
+      }
+
+      // call displayEvents when the page loads
+      displayEvents();
+    </script>
+  </body>
+</html>

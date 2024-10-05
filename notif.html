@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bell Icon with Events</title>
+    <style>
+      /* CSS styles to display the dot when there are events happening */
+      #bell-icon {
+        position: relative;
+        background-image: url("https://icons.iconarchive.com/icons/paomedia/small-n-flat/24/bell-icon.png"); /* replace with your bell icon image */
+        background-size: 20px 20px;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+      }
+
+      #bell-icon::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: red;
+        display: none;
+      }
+
+      #bell-icon.event-happening::after {
+        display: block;
+      }
+
+      /* CSS styles to display the event list */
+      #event-list {
+        display: none;
+        position: absolute;
+        top: 25px; /* adjust the top margin to position the list below the bell icon */
+        left: 0; /* position the list to the left of the bell icon */
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        padding: 10px;
+        width: 200px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      #event-list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #event-list li {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      #event-list li:last-child {
+        border-bottom: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Bell icon -->
+    <i id="bell-icon"></i>
+
+    <!-- Event list container -->
+    <div id="event-list">
+      <ul id="events"></ul>
+    </div>
+
+    <script>
+      let events = [
+        {
+          name: '<a href="https://forms.gle/ceAdbCrWsmreCepDA">Kalamgiri Recruitment</a>',
+        },
+        {
+          name: '<a href="https://www.genesisnow.tech">Genesis Recruitment</a>',
+        },
+        { name: "Event 3" },
+      ]; // assume this is your event list
+
+      // toggle dot and event list display
+      document
+        .getElementById("bell-icon")
+        .addEventListener("click", function () {
+          document.getElementById("event-list").style.display = "block";
+        });
+
+      // update bell icon when events happen
+      function updateBellIcon() {
+        if (events.length > 0) {
+          document.getElementById("bell-icon").classList.add("event-happening");
+        } else {
+          document
+            .getElementById("bell-icon")
+            .classList.remove("event-happening");
+        }
+      }
+
+      // call updateBellIcon when events happen
+      updateBellIcon();
+
+      // display events
+      function displayEvents() {
+        const eventList = document.getElementById("events");
+        eventList.innerHTML = "";
+        events.forEach(function (event) {
+          const eventHTML = `<li>${event.name}</li>`;
+          eventList.innerHTML += eventHTML;
+        });
+        updateBellIcon(); // call updateBellIcon after displaying events
+      }
+
+      // call displayEvents when bell icon is clicked
+      document
+        .getElementById("bell-icon")
+        .addEventListener("click", displayEvents);
+    </script>
+  </body>
+</html>

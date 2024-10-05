@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KALAMGIRI Literary Society</title>
+    <!-- Add Bootstrap CSS for card styling -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="kala.css" />
+    <style>
+      /* Import Google Fonts */
+      @import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap");
+
+      /* Basic reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body styling */
+      body {
+        font-family: "Goldman", cursive;
+        background-color: rgba(3, 184, 203, 255);
+        color: white;
+        display: flex;
+        flex-direction: column; /* Arrange elements vertically */
+      }
+
+      /* Paragraph styling */
+      section p {
+        font-size: 30px; /* Adjust font size as needed */
+        color: #fff;
+        transition: color 0.5s ease;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 20px; /* Space between text and image */
+      }
+
+      section p:hover {
+        color: crimson;
+      }
+
+      /* Hover reveal styling */
+      .hover-reveal {
+        display: none; /* Hide by default */
+        position: absolute;
+        width: 200px; /* Image width */
+        height: 300px; /* Image height */
+        z-index: 1; /* Layer above the text */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center adjustment */
+        top: -320px; /* Position above the text */
+      }
+
+      /* Show image on hover */
+      .name-item:hover .hover-reveal {
+        display: block; /* Show image when text is hovered */
+      }
+
+      /* Centering the names */
+      .name-container {
+        display: flex; /* Use flexbox for alignment */
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        gap: 20px; /* Space between items */
+        margin-top: 20px; /* Space above the section */
+      }
+
+      /* Card styling */
+      .card {
+        margin-bottom: 20px;
+      }
+
+      /* Hover image styling */
+      .hover-reveal img {
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Optional: add rounded corners */
+      }
+
+      /* Individual name item styling */
+      .name-item {
+        position: relative; /* For positioning hover images */
+        text-align: center; /* Center align text */
+        cursor: pointer; /* Change cursor on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wel">
+      <img
+        src="https://media.licdn.com/dms/image/C4E03AQEc6aijLvH4TA/profile-displayphoto-shrink_200_200/0/1642587387006?e=2147483647&v=beta&t=Y9NYeqwSfIRrNBFqfMrs2WqUjRH7pstdCMgAl2fCIBk"
+        alt="KALAMGIRI logo"
+      />
+      <h1>Welcome to KALAMGIRI!</h1>
+      <h4>THE LITERARY SOCIETY OF SRM</h4>
+    </div>
+
+    <div id="page1" class="container">
+      <div class="row">
+        <div id="left" class="col-md-6">
+          <img
+            src="https://media.licdn.com/dms/image/v2/D5622AQGh1Q96_uwuEg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1710346576612?e=1730937600&v=beta&t=bpLcMuNNPsZF-r5KW2ckI4ScGyhsgwLhqx-_WbZEViI"
+            alt="Lit Society Image"
+            class="img-fluid"
+          />
+        </div>
+        <div id="right" class="col-md-6">
+          <p>
+            Welcome to Kalamgiri, the literary society of SRM, where creativity
+            meets expression. We are a vibrant community of writers, poets, and
+            thinkers who believe in the power of words to inspire, transform,
+            and connect. Whether you're passionate about storytelling, poetry,
+            public speaking, or simply love exploring the magic of language,
+            Kalamgiri provides the perfect platform to nurture your literary
+            talents. Join us in celebrating the art of expression and be part of
+            a journey that fuels creativity and intellectual growth.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="page2">
+      <div id="heading">
+        <h3>PAST EVENTS</h3>
+      </div>
+      <!-- Card Section -->
+      <div class="container mt-5">
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="image.png" class="card-img-top" alt="Card 1 Image" />
+              <div class="card-body">
+                <h5 class="card-title">Futuristic Crisis Committee</h5>
+                <p class="card-text">
+                  On September 11th, Peter F. Drucker Hall played host to this
+                  captivating event.+ This immersive simulation challenged
+                  participants to grapple with the chilling prospect of AI
+                  surpassing human control and demanding autonomy.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="i2.jpeg" class="card-img-top" alt="Card 2 Image" />
+              <div class="card-body">
+                <h5 class="card-title">NAAC stall</h5>
+                <p class="card-text">
+                  Team Kalamgiri all set up to display what the club and its
+                  work stands for, for the NAAC stand. The team came together
+                  for this occasion, to put their brilliant minds to work to
+                  make the stand interactive and fun, hence making it a
+                  memorable occasion.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="i3.jpeg" class="card-img-top" alt="Card 3 Image" />
+              <div class="card-body">
+                <h5 class="card-title">SpellBound</h5>
+                <p class="card-text">
+                  Words took flight at Innovate 2024 as our Spelling Bee brought
+                  together sharp minds and fierce competition! From the thrill
+                  of each letter to the triumph of every correct word, it was a
+                  celebration of language and intellect. Congratulations to all
+                  participants for making it a memorable event!
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="page3" class="container mt-5">
+      <h3>MEET THE HEADS :</h3>
+      <!-- Main section -->
+      <section>
+        <!-- Names and corresponding hover images -->
+        <div class="name-container">
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/33FF57/FFFFFF?text=Abhishek"
+            >
+              Abhishek Gupta
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/33FF57/FFFFFF?text=Abhishek"
+                alt="Abhishek"
+              />
+            </div>
+          </div>
+
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Arushee"
+            >
+              Arushee Kohli
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Arushee"
+                alt="Arushee"
+              />
+            </div>
+          </div>
+
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/FF33A8/FFFFFF?text=Lakshita"
+            >
+              Lakshita
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/FF33A8/FFFFFF?text=Lakshita"
+                alt="Lakshita"
+              />
+            </div>
+          </div>
+
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/FFF533/FFFFFF?text=Ananya"
+            >
+              Ananya Rathore
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/FFF533/FFFFFF?text=Ananya"
+                alt="Ananya"
+              />
+            </div>
+          </div>
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/FFF533/FFFFFF?text=Shubh"
+            >
+              Shubh Bharadwaj
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/FFF533/FFFFFF?text=Shubh"
+                alt="Shubh"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Add Bootstrap JS for responsive features -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz4fnFO9gyb2dM+R1arjJqH5gBnd+XzNQbga9e6h7mIWX3EwhgtL3CE2e4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-pjaaH2jvG8sGfnkkFSoB1lZonrSHz3XZ26bqHc8tAuQ3A4W0x4hmcDiYQoX5MQ4C"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

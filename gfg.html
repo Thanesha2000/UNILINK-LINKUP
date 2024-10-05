@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GFG</title>
+    <!-- Add Bootstrap CSS for card styling -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="gfg.css" />
+    <style>
+      /* Import Google Fonts */
+      @import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap");
+
+      /* Basic reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body styling */
+      body {
+        font-family: "Goldman", cursive;
+        background-color: rgba(2, 138, 97, 255);
+        color: white;
+        display: flex;
+        flex-direction: column; /* Arrange elements vertically */
+      }
+
+      /* Paragraph styling */
+      section p {
+        font-size: 30px; /* Adjust font size as needed */
+        color: #fff;
+        transition: color 0.5s ease;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 20px; /* Space between text and image */
+      }
+
+      section p:hover {
+        color: crimson;
+      }
+
+      /* Hover reveal styling */
+      .hover-reveal {
+        display: none; /* Hide by default */
+        position: absolute;
+        width: 200px; /* Image width */
+        height: 300px; /* Image height */
+        z-index: 1; /* Layer above the text */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center adjustment */
+        top: -320px; /* Position above the text */
+      }
+
+      /* Show image on hover */
+      .name-item:hover .hover-reveal {
+        display: block; /* Show image when text is hovered */
+      }
+
+      /* Centering the names */
+      .name-container {
+        display: flex; /* Use flexbox for alignment */
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        gap: 20px; /* Space between items */
+        margin-top: 20px; /* Space above the section */
+      }
+
+      /* Card styling */
+      .card {
+        margin-bottom: 20px;
+      }
+
+      /* Hover image styling */
+      .hover-reveal img {
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Optional: add rounded corners */
+      }
+
+      /* Individual name item styling */
+      .name-item {
+        position: relative; /* For positioning hover images */
+        text-align: center; /* Center align text */
+        cursor: pointer; /* Change cursor on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wel">
+      <img
+        src="https://media.licdn.com/dms/image/v2/C4D0BAQEgXnQ0A1kCsg/company-logo_200_200/company-logo_200_200/0/1640073444257?e=1736380800&v=beta&t=IvQkK7ClFjMBIdLSMMZC7ovcY70N6bUgCpXv4ziN0a4"
+        alt="GFG Logo"
+      />
+      <h1>Welcome to GFG!</h1>
+      <h4>TECH SOCIETY OF SRM</h4>
+    </div>
+
+    <div id="page1" class="container">
+      <div class="row">
+        <div id="left" class="col-md-6">
+          <img src="g1.jpeg" alt="GFG Image" class="img-fluid" />
+        </div>
+        <div id="right" class="col-md-6">
+          <p>
+            Welcome to GeeksforGeeks SRMIST Delhi NCR Chapter! We are thrilled
+            to have you here! Our chapter is a vibrant community of coders,
+            problem solvers, and tech enthusiasts, passionate about learning,
+            sharing, and growing together. Whether you're a beginner or an
+            experienced programmer, you'll find a place here to enhance your
+            skills, collaborate on exciting projects, and prepare for a bright
+            career in tech. Join us for hands-on workshops, coding contests,
+            hackathons, and much more! Together, let’s unlock new opportunities,
+            build innovative solutions, and take a step closer to your tech
+            goals. Start your coding journey with us—where learning meets
+            innovation!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="page2">
+      <div id="heading">
+        <h3>PAST EVENTS</h3>
+      </div>
+      <!-- Card Section -->
+      <div class="container mt-5">
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="https://media.licdn.com/dms/image/v2/D5622AQHc6zautVegBQ/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1723135585176?e=1730937600&v=beta&t=j9DgEYPhJMS6TMvtTOoI0huf7UB8YhoGnyF4MfBGiNg"
+                alt="Card 1 Image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">GeeksforGeeks community Townhall</h5>
+                <p class="card-text">
+                  This event was a great opportunity to network with
+                  professionals and learn from industry experts like Saurabh
+                  Mahawar, Amritaa Sethi, Devashish Khare, and Akshay Kumar
+                  Paswan, whose insights left a lasting impact. Meeting Sandeep
+                  Jain, the visionary founder and CEO of GeeksforGeeks, was
+                  truly inspiring, as his dedication to advancing tech education
+                  shone through. The panel discussions on emerging technologies,
+                  placement strategies, and GATE preparations provided valuable
+                  knowledge.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="https://media.licdn.com/dms/image/v2/D5622AQHGwFnnURIkFQ/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1710261739261?e=1730937600&v=beta&t=B5OM0C4LftIxaNMo7JDIueMOmlTdGOR1CrO4sQnVM1A"
+                alt="Card 2 Image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">NAAC stall</h5>
+                <p class="card-text">
+                  GeeksforGeeks SRMIST Delhi-NCR Student Chapter proudly
+                  showcased their commitment to academic excellence and
+                  innovation during the recent NAAC visit. The event featured a
+                  dedicated stall that highlighted key resources, innovative
+                  projects, and insights into accreditation processes,
+                  emphasizing the chapter's role in fostering quality
+                  enhancement throughout the institution. The interactive
+                  sessions and exhibits captured the attention of students and
+                  faculty alike, demonstrating the chapter's dedication to
+                  bridging the gap between technical education and institutional
+                  growth, continuing on our journey of promoting academic growth
+                  and innovation
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="https://media.licdn.com/dms/image/v2/D5622AQHt5KrxB9T_WA/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1708750826894?e=1730937600&v=beta&t=JwTUWYfS997O5Yz8OuQ8Axhoa3okJ-UFJJTRTJltIZg"
+                class="card-img-top"
+                alt="Card 3 Image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">ML Mastery</h5>
+                <p class="card-text">
+                  The GeeksforGeeks SRMIST Delhi-NCR Student Chapter proudly
+                  hosted the "ML Mastery" workshop, featuring insights from
+                  renowned industry experts. Participants engaged in hands-on
+                  sessions and discussions, gaining valuable knowledge in
+                  machine learning concepts and applications. This enriching
+                  experience empowered attendees to deepen their understanding
+                  and enhance their skills in this dynamic field. The chapter
+                  looks forward to hosting more events that inspire innovation
+                  and foster a strong learning community, further solidifying
+                  their commitment to excellence in tech education and equipping
+                  students for success in their future careers!
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="page3" class="container mt-5">
+      <h3>MEET THE HEADS :</h3>
+      <!-- Main section -->
+      <section>
+        <!-- Names and corresponding hover images -->
+        <div class="name-container">
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/33FF57/FFFFFF?text=Arshdeep"
+            >
+              Arshdeep Singh Virdi
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/33FF57/FFFFFF?text=Arsdeep"
+                alt="Arshdeep"
+              />
+            </div>
+          </div>
+
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/FF33A8/FFFFFF?text=Aastha"
+            >
+              Aastha Vats
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/FF33A8/FFFFFF?text=Aastha"
+                alt="Aastha"
+              />
+            </div>
+          </div>
+
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/FFF533/FFFFFF?text=Lakshya"
+            >
+              Lakshya Arora
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/FFF533/FFFFFF?text=Lakshya"
+                alt="Lakshya"
+              />
+            </div>
+          </div>
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/FFF533/FFFFFF?text=Swarnim"
+            >
+              Swarnim Burnwal
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/FFF533/FFFFFF?text=Swarnim"
+                alt="Swarnim"
+              />
+            </div>
+          </div>
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Archit"
+            >
+              Archit Saxena
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Archit"
+                alt="Archit"
+              />
+            </div>
+          </div>
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Debasmita"
+            >
+              Debasmita Mukherjee
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Debasmita"
+                alt="Debasmita"
+              />
+            </div>
+          </div>
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Anshita"
+            >
+              Anshita Mishra
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Anshita"
+                alt="Anshita"
+              />
+            </div>
+          </div>
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Shreshth"
+            >
+              Shreshth Sharma
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Shreshth"
+                alt="Shreshth"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Add Bootstrap JS for responsive features -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz4fnFO9gyb2dM+R1arjJqH5gBnd+XzNQbga9e6h7mIWX3EwhgtL3CE2e4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-pjaaH2jvG8sGfnkkFSoB1lZonrSHz3XZ26bqHc8tAuQ3A4W0x4hmcDiYQoX5MQ4C"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

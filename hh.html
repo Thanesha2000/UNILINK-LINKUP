@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HACKHOUND</title>
+    <!-- Add Bootstrap CSS for card styling -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="hh.css" />
+    <style>
+      /* Import Google Fonts */
+      @import url("https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap");
+
+      /* Basic reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body styling */
+      body {
+        font-family: "Goldman", cursive;
+        color: white;
+        display: flex;
+        flex-direction: column; /* Arrange elements vertically */
+      }
+
+      /* Paragraph styling */
+      section p {
+        font-size: 30px; /* Adjust font size as needed */
+        color: #fff;
+        transition: color 0.5s ease;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 20px; /* Space between text and image */
+      }
+
+      section p:hover {
+        color: crimson;
+      }
+
+      /* Hover reveal styling */
+      .hover-reveal {
+        display: none; /* Hide by default */
+        position: absolute;
+        width: 200px; /* Image width */
+        height: 300px; /* Image height */
+        z-index: 1; /* Layer above the text */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Center adjustment */
+        top: -320px; /* Position above the text */
+      }
+
+      /* Show image on hover */
+      .name-item:hover .hover-reveal {
+        display: block; /* Show image when text is hovered */
+      }
+
+      /* Centering the names */
+      .name-container {
+        display: flex; /* Use flexbox for alignment */
+        flex-wrap: wrap; /* Allow items to wrap to the next line */
+        gap: 20px; /* Space between items */
+        margin-top: 20px; /* Space above the section */
+      }
+
+      /* Card styling */
+      .card {
+        margin-bottom: 20px;
+      }
+
+      /* Hover image styling */
+      .hover-reveal img {
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Optional: add rounded corners */
+      }
+
+      /* Individual name item styling */
+      .name-item {
+        position: relative; /* For positioning hover images */
+        text-align: center; /* Center align text */
+        cursor: pointer; /* Change cursor on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wel">
+      <img
+        src="https://media.licdn.com/dms/image/C4D0BAQHD0BSKDxRLUg/company-logo_200_200/0/1671790302339/hackhound_logo?e=2147483647&v=beta&t=Vx3s8xy9hmbX2z1NYoMhvUQza66naxmWH4P53jKuRsg"
+        alt="KALAMGIRI logo"
+      />
+      <h1>Welcome To HACKHOUND!</h1>
+      <h4>THE TECH REVOLTUION OF SRM</h4>
+    </div>
+
+    <div id="page1" class="container">
+      <div class="row">
+        <div id="left" class="col-md-6">
+          <img src="h11.heic" alt="Tech Society" class="img-fluid" />
+        </div>
+        <div id="right" class="col-md-6">
+          <p>
+            Welcome to HackHound, the dynamic technical society of SRM! From
+            immersive workshops and round-the-clock hackathons to hosting SIH
+            internal hackathons, we ignite innovation and foster a community of
+            tech enthusiasts eager to push boundaries and create solutions for
+            tomorrow. Our mission is to empower students with hands-on
+            experience, cutting-edge technologies, and collaborative platforms
+            where creativity meets technical expertise. Whether you're a
+            seasoned developer or a curious beginner, HackHound provides a
+            thriving ecosystem to grow, learn, and transform ideas into
+            impactful realities. Join us on our journey to drive the future of
+            tech!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="page2">
+      <div id="heading">
+        <h3>PAST EVENTS</h3>
+      </div>
+      <!-- Card Section -->
+      <div class="container mt-5">
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="h3.jpeg" class="card-img-top" alt="Card 1 Image" />
+              <div class="card-body">
+                <h5 class="card-title">24/7 Hackathon</h5>
+                <p class="card-text">
+                  Relive the electrifying experience of our 24/7 Hackathon,
+                  where innovation, creativity, and endurance came together for
+                  an unforgettable event!The participants from various colleges
+                  were kept energized and engaged through a series of
+                  tech-related filler events and fun activities designed to
+                  inspire, entertain, and foster teamwork. This incredible blend
+                  of learning, collaboration, and innovation created a dynamic
+                  atmosphere, making it truly one-of-a-kind event.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="h1.jpg" class="card-img-top" alt="Card 2 Image" />
+              <div class="card-body">
+                <h5 class="card-title">Data Visualization Workshop</h5>
+                <p class="card-text">
+                  Celebrating Engineer's Day with Innovation: Hackathon Club
+                  hosted an engaging Data Visualization Workshop as part of our
+                  weeklong celebration, offering students the opportunity to
+                  enhance their technical expertise. Participants delved into
+                  powerful data tools and techniques, learning to transform
+                  complex datasets into insightful visual stories. The event not
+                  only fostered creativity but also empowered students with
+                  cutting-edge skills, setting them up for success in future
+                  projects.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="https://media.licdn.com/dms/image/v2/D4D22AQF7LVg8VDs6hw/feedshare-shrink_1280/feedshare-shrink_1280/0/1715238741089?e=1730937600&v=beta&t=ORGnExy3bHmkSxV5kwzvdk0NGtUPGvkry-atEcu1gZs"
+                class="card-img-top"
+                alt="Card 3 Image"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Innovate 2024</h5>
+                <p class="card-text">
+                  Engaging Minds, Fueling Innovation: HackHound's Tech Talk at
+                  Innovate 2024 was a thrilling experience that kept students
+                  hooked from the very first moment to the closing applause. As
+                  part of SRM's premier techfest, Innovate 2024, the session
+                  pushed the boundaries of innovation, inspiring the next
+                  generation of tech leaders to think beyond the ordinary and
+                  embrace the future of technology. The event sparked a passion
+                  for technology among the participants.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Last updated 3 mins ago</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="page3" class="container mt-5">
+      <h3>MEET THE LEADS :</h3>
+      <!-- Main section -->
+      <section>
+        <!-- Names and corresponding hover images -->
+        <div class="name-container">
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/FF5733/FFFFFF?text=Kushagra"
+            >
+              Kushagra Sharma
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/FF5733/FFFFFF?text=Kushagra"
+                alt="Kushagra"
+              />
+            </div>
+          </div>
+
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/33FF57/FFFFFF?text=Pragya"
+            >
+              Pragya Gaur
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/33FF57/FFFFFF?text=Pragya"
+                alt="Pragya"
+              />
+            </div>
+          </div>
+
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Arya"
+            >
+              Arya Putatunda
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Arya"
+                alt="Arya"
+              />
+            </div>
+          </div>
+
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/FF33A8/FFFFFF?text=Samridhi Puri"
+            >
+              Hitesh Bajaj
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/FF33A8/FFFFFF?text=Hitesh Bajaj"
+                alt="Hitesh Bajaj"
+              />
+            </div>
+          </div>
+
+          <div class="name-item">
+            <p
+              data-image="https://via.placeholder.com/200x300/33FFA8/FFFFFF?text=Lalith"
+            >
+              Sri Lalith Mulukutla
+            </p>
+            <div class="hover-reveal">
+              <img
+                src="https://via.placeholder.com/200x300/33FFA8/FFFFFF?text=Lalith"
+                alt="Sri Lalith Mulukutla"
+              />
+            </div>
+          </div>
+          <!-- Make sure this closing tag is properly indented -->
+        </div>
+      </section>
+    </div>
+
+    <!-- Add Bootstrap JS for responsive features -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz4fnFO9gyb2dM+R1arjJqH5gBnd+XzNQbga9e6h7mIWX3EwhgtL3CE2e4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-pjaaH2jvG8sGfnkkFSoB1lZonrSHz3XZ26bqHc8tAuQ3A4W0x4hmcDiYQoX5MQ4C"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  background-color: rgba(0, 45, 64, 255);
+}
+
+/* Welcome Section Styling */
+#wel {
+  text-align: center;
+  padding: 50px;
+  background-color: rgba(73, 178, 206, 255);
+}
+
+#wel h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: rgba(0, 45, 64, 255);
+}
+
+#wel h4 {
+  font-size: 24px;
+  color: rgba(0, 45, 64, 255);
+  margin-top: 10px;
+}
+
+/* Content Section Styling */
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: rgb(148, 142, 142);
+  padding: 20px;
+}
+
+.navbar-brand img {
+  margin-right: 15px;
+  background-color: rgb(148, 142, 142);
+}
+
+.navbar-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Page 1 styling */
+#page1 {
+  display: flex;
+  align-items: center; /* Vertically center content */
+  justify-content: space-between; /* Spread content to left and right */
+  height: 100vh; /* Full viewport height */
+  /* Black background */
+  padding: 20px; /* Add padding around the content */
+  box-sizing: border-box;
+}
+#page1 p {
+  text-align: center;
+  color: #fff;
+}
+#page1 img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Card section styling */
+#page2 {
+  padding: 50px 0;
+  background-color: rgba(73, 178, 206, 255);
+}
+
+#page2 h3 {
+  color: white;
+}
+
+.card {
+  margin-bottom: 30px;
+  background-color: #333;
+  color: white;
+  transition: transform 0.2s;
+  border: none;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Page 2 Styling */
+#page2 {
+  padding: 50px;
+}
+
+#page2 h3 {
+  text-align: center;
+  color: rgba(0, 45, 64, 255); /* Ensure text is visible */
+}
+#left {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+}
+
+#left img {
+  max-width: 90%; /* Ensure the image doesn't overflow */
+  height: auto;
+  border-radius: 10px; /* Optional: add some rounding to the corners */
+}
+
+/* Text on the right side */
+#right {
+  flex: 1;
+  color: black; /* White text for contrast against black background */
+  padding-left: 20px; /* Add space between image and text */
+}
+
+#right p {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 300; /* Light font weight */
+}
+
+/* Logo in the welcome section */
+#wel img {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+.name-container {
+  text-align: center;
+}
+#page3 h3 {
+  text-align: center;
+  color: #fff;
+}
