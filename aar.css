@@ -146,3 +146,88 @@ body {
   text-align: center;
   color: #fff;
 }
+/* Media Queries for responsiveness */
+
+/* For mobile devices (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+  #page1 {
+    flex-direction: column; /* Stack content vertically */
+  }
+  #page1 img {
+    width: 100%; /* Make image full-width */
+  }
+  #left {
+    flex-direction: column; /* Stack image and text vertically */
+  }
+  #left img {
+    width: 100%; /* Make image full-width */
+  }
+  #right {
+    padding-left: 0; /* Remove padding for mobile devices */
+  }
+  #right p {
+    font-size: 16px; /* Reduce font size for mobile devices */
+  }
+  .card {
+    margin-bottom: 20px; /* Reduce margin for mobile devices */
+  }
+  .card-img-top {
+    height: 150px; /* Reduce image height for mobile devices */
+  }
+}
+
+/* For tablet devices (min-width: 769px) and (max-width: 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  #page1 {
+    flex-direction: row; /* Return to horizontal layout */
+  }
+  #page1 img {
+    width: 50%; /* Make image half-width */
+  }
+  #left {
+    flex-direction: row; /* Return to horizontal layout */
+  }
+  #left img {
+    width: 50%; /* Make image half-width */
+  }
+  #right {
+    padding-left: 20px; /* Restore padding for tablet devices */
+  }
+  #right p {
+    font-size: 18px; /* Increase font size for tablet devices */
+  }
+  .card {
+    margin-bottom: 25px; /* Increase margin for tablet devices */
+  }
+  .card-img-top {
+    height: 180px; /* Increase image height for tablet devices */
+  }
+}
+
+/* For laptop and desktop devices (min-width: 1025px) */
+@media only screen and (min-width: 1025px) {
+  #page1 {
+    flex-direction: row; /* Return to horizontal layout */
+  }
+  #page1 img {
+    width: 50%; /* Make image one-third width */
+  }
+  #left {
+    flex-direction: row; /* Return to horizontal layout */
+  }
+  #left img {
+    width: 100%; /* Make image one-third width */
+  }
+  #right {
+    padding-left: 30px; /* Increase padding for laptop and desktop devices */
+  }
+  #right p {
+    font-size: 20px; /* Increase font size for laptop and desktop devices */
+  }
+  .card {
+    margin-bottom: 30px; /* Increase margin for laptop and desktop devices */
+  }
+  .card-img-top {
+    height: 200px; /* Increase image height for laptop and desktop devices */
+  }
+}
