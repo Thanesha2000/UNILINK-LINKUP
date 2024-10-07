@@ -1,150 +1,142 @@
-/* Reset CSS */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
+/* General Styles */
 body {
-  background-color: rgb(49, 44, 44);
-  height: 100%;
-  width: 100%;
-}
-
-/* Welcome Section Styling */
-#wel {
-  text-align: center;
-  padding: 50px;
-  background-color: black;
-}
-
-#wel h1 {
-  font-size: 36px;
-  font-weight: bold;
-  color: #fff;
-}
-
-#wel h4 {
-  font-size: 24px;
-  color: rgb(235, 228, 228);
-  margin-top: 10px;
-}
-
-/* Content Section Styling */
-/* Reset CSS */
-* {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
-/* Navbar styling */
-.navbar {
-  background-color: rgb(148, 142, 142);
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
 }
 
-.navbar-brand img {
-  margin-right: 15px;
-  background-color: rgb(148, 142, 142);
+/* Section styling */
+.section {
+  margin-bottom: 40px;
 }
 
-.navbar-text {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-}
-
-/* Page 1 styling */
-#page1 {
-  display: flex;
-  align-items: center; /* Vertically center content */
-  justify-content: space-between; /* Spread content to left and right */
-  height: 100vh; /* Full viewport height */
-  /* Black background */
-  padding: 20px; /* Add padding around the content */
-  box-sizing: border-box;
-}
-#page1 p {
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
   text-align: center;
-  color: #fff;
 }
-#page1 img {
+
+.section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Image styling */
+.section img {
+  width: 100%;
+  height: auto;
   max-width: 100%;
+  display: block;
+  margin-bottom: 20px;
   border-radius: 10px;
 }
 
-/* Card section styling */
-#page2 {
-  padding: 50px 0;
-  background-color: black;
+/* Flex container for sections */
+.section-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
-#page2 h3 {
-  color: white;
+.section-content {
+  flex: 1 1 45%; /* Ensures a balanced layout on larger screens */
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.card {
-  margin-bottom: 30px;
+.section img {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Mobile-first approach */
+@media (max-width: 768px) {
+  /* On mobile, stack the elements */
+  .section-wrapper {
+    flex-direction: column;
+  }
+
+  .section-content {
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+
+  .section img {
+    margin-bottom: 15px;
+  }
+
+  .section p {
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) {
+  /* On larger screens, images appear alongside content */
+  .section-wrapper {
+    flex-direction: row;
+  }
+
+  /* Ensure images are on the left and text on the right for readability */
+  .section img {
+    order: 1;
+  }
+
+  .section-content p {
+    text-align: justify;
+  }
+}
+
+/* Professional styling */
+.header {
+  text-align: center;
+  padding: 40px;
   background-color: #333;
   color: white;
-  transition: transform 0.2s;
-  border: none;
 }
 
-.card:hover {
-  transform: scale(1.05);
+.header h1 {
+  margin: 0;
+  font-size: 3rem;
 }
 
-.card-img-top {
-  height: 200px;
-  object-fit: cover;
-}
-
-/* Page 2 Styling */
-#page2 {
-  padding: 50px;
-}
-
-#page2 h3 {
+.footer {
   text-align: center;
-  color: white; /* Ensure text is visible */
-}
-#left {
-  flex: 1;
-  display: flex;
-  justify-content: center; /* Center the image horizontally */
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  font-size: 0.9rem;
 }
 
-#left img {
-  max-width: 90%; /* Ensure the image doesn't overflow */
-  height: auto;
-  border-radius: 10px; /* Optional: add some rounding to the corners */
-}
+/* Responsive typography */
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 2.5rem;
+  }
 
-/* Text on the right side */
-#right {
-  flex: 1;
-  color: black; /* White text for contrast against black background */
-  padding-left: 20px; /* Add space between image and text */
-}
+  .section h2 {
+    font-size: 1.75rem;
+  }
 
-#right p {
-  font-size: 20px;
-  line-height: 1.6;
-  font-weight: 300; /* Light font weight */
-}
+  .section p {
+    font-size: 1rem;
+  }
 
-/* Logo in the welcome section */
-#wel img {
-  width: 100px;
-  height: 100px;
-  float: left;
-}
-.name-container {
-  text-align: center;
-}
-#page3 h3 {
-  text-align: center;
-  color: #fff;
+  .footer {
+    font-size: 0.8rem;
+  }
 }
