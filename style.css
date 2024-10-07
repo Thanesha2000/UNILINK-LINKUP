@@ -221,6 +221,12 @@ body {
   cursor: pointer;
   position: relative;
 }
+.vid img {
+  width: 75%; /* Set the desired width */
+  height: 75%; /* Set the desired height */
+  object-fit: cover; /* Ensures the image fits well within the specified size */
+}
+
 .menu .small-links h3::after {
   content: "";
   position: absolute;
