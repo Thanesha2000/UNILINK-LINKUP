@@ -1,139 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Card Layout with Images</title>
+    <style>
+      /* General styling */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
 
-    <title>CLUBS</title>
-    <link rel="stylesheet" href="ac.css">
-</head>
-<body>
-    <div id="nav">
-        <h1>WELCOME TO THE CLUBS  </h1>
-    </div>
-    
-    <div id="main">
-        <div id="page2">
-            
-            
-            
-            <div id="new">
-                <div id="new-in">
-                    <h3>AARZOO.KALAMGIRI.MAGAN</h3>
-                </div>
-            </div>
-            <div id="cards2">
-                <div class="card" id="card4">
-                    <a href="aar.html">
-                 <div class="overlay">
-                    <h4>AARZOO</h4>
-                    <p>Drama society of SRM. From nukkad nattak to stage plays they got it all covered .</p>
+      body {
+        background-color: #333;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        min-height: 100vh;
+        padding: 20px;
+      }
 
-                 </div>
-                 </a>
-                </div>
-                <div class="card" id="card5">
-                    <a href="kala.html">
-                    <div class="overlay">
-                        <h4>KALAMGIRI </h4>
-                        <p>Encourage your inner author by being a part of the literary club of SRM  </p>
-                       
-                    </div>
-                     </a>
-                </div>
-                <div class="card" id="card6">
-                    <a href="mag.html">
-                    <div class="overlay">
-                        <h4>MAGAN </h4>
-                        
-                        <p> The music club of SRM.From jamming sessions to the performances on your favorite song they got it all covered.</p>
-                    </div>
-                    </a>
-                </div>
-            </div>
-            <div id="techie">
-                <div id="techie-in">
-                    <h3>HACKHOUND.GFG.CSI</h3>
-                    
-                    
-                </div>
-            </div>
-            <div id="cards3" >
-                <div class="card" id="card7">
-                    <a href="hh.html">
-                    <div class="overlay">
-                       <h4>HACKHOUND </h4>
-                       <p>From 24hr hackathons to technical speaker sessions they got it all covered + They teach cool stuff too !</p>
-                    </div>
-                    </a>
-                   </div>
-                   <div class="card" id="card8">
-                    <a href="gfg.html">
-                       <div class="overlay">
-                           <h4>GFG</h4>
-                           <p> Geeks for Geeks:it's all about coding </p>
-                       </div>
-                       </a>
-   
-                   </div>
-                   <div class="card" id="card9">
-                       <div class="overlay">
-                           <h4>CSI</h4>
-                           <p>A technical society of SRM . </p>
-                       </div>
-   
-                   </div>
-                
-                    
-                </div>
-            </div>
-            <div id="bc">
-                <div id="bc-in">
-                    <h3>GDSC.CC.BITBUCKS</h3>
-                    
-                    
-                </div>
-            </div>
-            <div id="cards4">
-                <a></a>
-                <div class="card" id="card10">
-                    <div class="overlay">
-                       <h4>GDSC </h4>
-                       <p>From 24hr hackathons to technical speaker sessions they got it all covered + They teach cool stuff too !</p>
-                    </div>
-                   </div>
-                <div class="card" id="card11">
-                    <div class="overlay">
-                      <h4>CHARCHA </h4>
-                      <h4>CHRONICLES</h4>
-                        <p> Newsletter of SRM got your daily dose of information around the campus . </p>
-                    </div>   
-                </div>
-                   <div class="card" id="card12">
-                       <div class="overlay">
-                           <h4>BITBUCKS</h4>
-                           <p>A technical society of SRM . </p>
-                       </div>
-   
-                   </div>
-                </div>
-            </div>
+      /* Heading styling */
+      h1 {
+        text-align: center;
+        width: 100%;
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #fff;
+      }
+
+      /* Container for cards */
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+        gap: 30px;
+        max-width: 1200px;
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      /* Card styling */
+      .card {
+        background-color: #444;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        aspect-ratio: 1 / 1; /* Ensures a square shape */
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card:hover {
+        transform: translateY(-10px); /* Hover effect */
+      }
+
+      /* Image styling */
+      .card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Ensures image fills the card area while maintaining aspect ratio */
+        border-bottom: 3px solid #333; /* Optional border */
+      }
+
+      /* Card content */
+      .card-content {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 1;
+        height: 100%;
+      }
+
+      .card-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #f0f0f0;
+        text-align: center;
+      }
+
+      .card-description {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #ddd;
+        text-align: center;
+      }
+
+      /* Responsive adjustment for smaller screens */
+      @media screen and (max-width: 768px) {
+        .card-container {
+          grid-template-columns: repeat(
+            1,
+            1fr
+          ); /* 1 card per row on small screens */
+        }
+
+        .card-title {
+          font-size: 20px;
+        }
+
+        .card-description {
+          font-size: 14px;
+        }
+
+        h1 {
+          font-size: 28px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>WELCOME TO CLUBS</h1>
+    <!-- Container for all rows and cards -->
+    <div class="card-container">
+      <!-- Row 1 -->
+      <div class="card">
+        <a href="aar.html">
+          <img src="al.jpg" alt="Card 1 Image" />
+          <div class="card-content">
+            <h2 class="card-title">Card 1</h2>
+            <p class="card-description">
+              Description for Card 1. A short text goes here.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="kala.html">
+          <img src="kl.jpg" alt="Card 2 Image" />
+          <div class="card-content">
+            <h2 class="card-title">Card 2</h2>
+            <p class="card-description">
+              Description for Card 2. A short text goes here.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="mag.html">
+          <img
+            src="https://cdn.campsite.bio/eyJidWNrZXQiOiJjYW1wc2l0ZS1iaW8tc3RvcmFnZSIsImtleSI6Im1lZGlhL3Byb2ZpbGUtaW1hZ2VzL2VmZWE3OGFkLWE5YTEtNDYxZC04OWIwLTMyNzQxYWI0MTc2YS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjIwMH19fQ=="
+            alt="Card 3 Image"
+          />
+          <div class="card-content">
+            <h2 class="card-title">Card 3</h2>
+            <p class="card-description">
+              Description for Card 3. A short text goes here.
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="card">
+        <a href="hh.html">
+          <img src="hhl.jpg" alt="Card 4 Image" />
+          <div class="card-content">
+            <h2 class="card-title">Card 4</h2>
+            <p class="card-description">
+              Description for Card 4. A short text goes here.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="gfg.html">
+          <img src="gfgl.jpg" alt="Card 5 Image" />
+          <div class="card-content">
+            <h2 class="card-title">Card 5</h2>
+            <p class="card-description">
+              Description for Card 5. A short text goes here.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <img src="csl.jpg" alt="Card 6 Image" />
+        <div class="card-content">
+          <h2 class="card-title">Card 6</h2>
+          <p class="card-description">
+            Description for Card 6. A short text goes here.
+          </p>
         </div>
-        </div>
-    </div>
-    
-    <script>
-      document
-        .querySelector("#card4")
-        .addEventListener("click", function () {
-          window.location.href = "aar.html";
-        });
-        </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="bc.js"></script>
-    
+      </div>
 
-</body>
+      <!-- Row 3 -->
+      <div class="card">
+        <img src="bbl.jpg" alt="Card 7 Image" />
+        <div class="card-content">
+          <h2 class="card-title">Card 7</h2>
+          <p class="card-description">
+            Description for Card 7. A short text goes here.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="ccl.jpg" alt="Card 8 Image" />
+        <div class="card-content">
+          <h2 class="card-title">Card 8</h2>
+          <p class="card-description">
+            Description for Card 8. A short text goes here.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="gdl.jpg" alt="Card 9 Image" />
+        <div class="card-content">
+          <h2 class="card-title">Card 9</h2>
+          <p class="card-description">
+            Description for Card 9. A short text goes here.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
