@@ -87,14 +87,28 @@
         text-align: center; /* Center align text */
         cursor: pointer; /* Change cursor on hover */
       }
+
+      /* Mobile-friendly media query */
+      @media (max-width: 768px) {
+        /* Reverse the column layout on mobile */
+        #page1 .row {
+          flex-direction: column-reverse;
+        }
+
+        #page1 img {
+          margin-bottom: 20px; /* Add spacing below the image */
+        }
+
+        /* Adjust text size for mobile screens */
+        section p {
+          font-size: 18px; /* Smaller font size on mobile */
+        }
+      }
     </style>
   </head>
   <body>
     <div id="wel">
-      <img
-        src="gfgl.jpg"
-        alt="GFG Logo"
-      />
+      <img src="gfgl.jpg" alt="GFG Logo" />
       <h1>Welcome to GFG!</h1>
       <h4>TECH SOCIETY OF SRM</h4>
     </div>
@@ -132,10 +146,7 @@
           <!-- Card 1 -->
           <div class="col-md-4">
             <div class="card">
-              <img
-                src="g12.jpg"
-                alt="Card 1 Image"
-              />
+              <img src="g12.jpg" alt="Card 1 Image" />
               <div class="card-body">
                 <h5 class="card-title">GeeksforGeeks community Townhall</h5>
                 <p class="card-text">
@@ -159,10 +170,7 @@
           <!-- Card 2 -->
           <div class="col-md-4">
             <div class="card">
-              <img
-                src="g13.jpg"
-                alt="Card 2 Image"
-              />
+              <img src="g13.jpg" alt="Card 2 Image" />
               <div class="card-body">
                 <h5 class="card-title">NAAC stall</h5>
                 <p class="card-text">
@@ -189,11 +197,7 @@
           <!-- Card 3 -->
           <div class="col-md-4">
             <div class="card">
-              <img
-                src="g14.jpg"
-                class="card-img-top"
-                alt="Card 3 Image"
-              />
+              <img src="g14.jpg" class="card-img-top" alt="Card 3 Image" />
               <div class="card-body">
                 <h5 class="card-title">ML Mastery</h5>
                 <p class="card-text">
@@ -233,7 +237,7 @@
             </p>
             <div class="hover-reveal">
               <img
-                src="https://via.placeholder.com/200x300/33FF57/FFFFFF?text=Arsdeep"
+                src="https://via.placeholder.com/200x300/33FF57/FFFFFF?text=Arshdeep"
                 alt="Arshdeep"
               />
             </div>
@@ -241,115 +245,33 @@
 
           <div class="name-item">
             <p
-              data-image="https://via.placeholder.com/200x300/FF33A8/FFFFFF?text=Aastha"
+              data-image="https://via.placeholder.com/200x300/33FFFF/FFFFFF?text=Aashi"
             >
-              Aastha Vats
+              Aashi Shrivastav
             </p>
             <div class="hover-reveal">
               <img
-                src="https://via.placeholder.com/200x300/FF33A8/FFFFFF?text=Aastha"
-                alt="Aastha"
+                src="https://via.placeholder.com/200x300/33FFFF/FFFFFF?text=Aashi"
+                alt="Aashi"
               />
             </div>
           </div>
 
           <div class="name-item">
             <p
-              data-image="https://via.placeholder.com/200x300/FFF533/FFFFFF?text=Lakshya"
+              data-image="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Vanshika"
             >
-              Lakshya Arora
+              Vanshika Rajput
             </p>
             <div class="hover-reveal">
               <img
-                src="https://via.placeholder.com/200x300/FFF533/FFFFFF?text=Lakshya"
-                alt="Lakshya"
-              />
-            </div>
-          </div>
-          <div class="name-item">
-            <p
-              data-image="https://via.placeholder.com/200x300/FFF533/FFFFFF?text=Swarnim"
-            >
-              Swarnim Burnwal
-            </p>
-            <div class="hover-reveal">
-              <img
-                src="https://via.placeholder.com/200x300/FFF533/FFFFFF?text=Swarnim"
-                alt="Swarnim"
-              />
-            </div>
-          </div>
-          <div class="name-item">
-            <p
-              data-image="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Archit"
-            >
-              Archit Saxena
-            </p>
-            <div class="hover-reveal">
-              <img
-                src="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Archit"
-                alt="Archit"
-              />
-            </div>
-          </div>
-          <div class="name-item">
-            <p
-              data-image="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Debasmita"
-            >
-              Debasmita Mukherjee
-            </p>
-            <div class="hover-reveal">
-              <img
-                src="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Debasmita"
-                alt="Debasmita"
-              />
-            </div>
-          </div>
-          <div class="name-item">
-            <p
-              data-image="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Anshita"
-            >
-              Anshita Mishra
-            </p>
-            <div class="hover-reveal">
-              <img
-                src="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Anshita"
-                alt="Anshita"
-              />
-            </div>
-          </div>
-          <div class="name-item">
-            <p
-              data-image="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Shreshth"
-            >
-              Shreshth Sharma
-            </p>
-            <div class="hover-reveal">
-              <img
-                src="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Shreshth"
-                alt="Shreshth"
+                src="https://via.placeholder.com/200x300/3357FF/FFFFFF?text=Vanshika"
+                alt="Vanshika"
               />
             </div>
           </div>
         </div>
       </section>
     </div>
-
-    <!-- Add Bootstrap JS for responsive features -->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz4fnFO9gyb2dM+R1arjJqH5gBnd+XzNQbga9e6h7mIWX3EwhgtL3CE2e4"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-pjaaH2jvG8sGfnkkFSoB1lZonrSHz3XZ26bqHc8tAuQ3A4W0x4hmcDiYQoX5MQ4C"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
